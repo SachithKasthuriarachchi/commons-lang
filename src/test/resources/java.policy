@@ -316,7 +316,7 @@ grant {
 
 // java.lang.reflect.UndeclaredThrowableException
 //    at $Proxy0.invoke(Unknown Source)
-//Running org.apache.commons.lang3.AnnotationUtilsTest
+//Running AnnotationUtilsTest
 //    at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:150)
 //    at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcess(SurefireStarter.java:91)
 //    at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:69)
@@ -342,7 +342,7 @@ grant {
 
 //    java.lang.reflect.UndeclaredThrowableException
 //    at $Proxy0.invoke(Unknown Source)
-//Running org.apache.commons.lang3.AnnotationUtilsTest
+//Running AnnotationUtilsTest
 //    at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:150)
 //    at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcess(SurefireStarter.java:91)
 //    at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:69)

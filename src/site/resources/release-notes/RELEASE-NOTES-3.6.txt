@@ -39,10 +39,10 @@ HIGHLIGHTS
 
 Some of the highlights in this release include:
 
-o The class org.apache.commons.lang3.concurrent.Memoizer is an implementation
+o The class Memoizer is an implementation
     of the Memoizer pattern as shown in
     Goetz, Brian et al. (2006) - Java Concurrency in Practice, p. 108.
-o The class org.apache.commons.lang3.ArchUtils has been added. ArchUtils is
+o The class ArchUtils has been added. ArchUtils is
     a utility class for the "os.arch" system property.
 
 DEPRECATIONS
@@ -55,20 +55,20 @@ Commons Text. This includes:
 
 o All classes in the org.apache.commons.lang3.text and the
     org.apache.commons.lang3.text.translate packages
-o org.apache.commons.lang3.StringEscapeUtils
-o org.apache.commons.lang3.RandomStringUtils
-o The methods org.apache.commons.lang3.StringUtils.getJaroWinklerDistance and
-    org.apache.commons.lang3.StringUtils.getLevenshteinDistance
+o StringEscapeUtils
+o RandomStringUtils
+o The methods StringUtils.getJaroWinklerDistance and
+    StringUtils.getLevenshteinDistance
 
 For more information see the Commons Text website:
 
     https://commons.apache.org/text
 
-The class org.apache.commons.lang3.CharEncoding has been deprecated in favor of
+The class CharEncoding has been deprecated in favor of
 java.nio.charset.StandardCharsets.
 
 The following methods have been deprecated in
-org.apache.commons.lang3.ArrayUtils in favor of the corresponding insert
+ArrayUtils in favor of the corresponding insert
 methods. Note that the handling for null inputs differs between add and insert.
 
 o add(boolean[], int, boolean) -> insert(int, boolean[], boolean...)
@@ -156,7 +156,7 @@ o LANG-1281: Javadoc of StringUtils.ordinalIndexOf is contradictory.
 o LANG-1188: StringUtils#join(T...): warning: [unchecked] Possible heap
              pollution from parameterized vararg type T.
 o LANG-1144: Multiple calls of
-             org.apache.commons.lang3.concurrent.LazyInitializer.initialize()
+             LazyInitializer.initialize()
              are possible. Thanks to Waldemar Maier, Gary Gregory.
 o LANG-1276: StrBuilder#replaceAll ArrayIndexOutOfBoundsException.
              Thanks to Andy Klimczak.
@@ -185,7 +185,7 @@ o LANG-1334: Deprecate CharEncoding in favour of
              java.nio.charset.StandardCharsets.
 o LANG-1110: Implement HashSetvBitSetTest using JMH.
              Thanks to Bruno P. Kinoshita.
-o LANG-1290: Increase test coverage of org.apache.commons.lang3.ArrayUtils.
+o LANG-1290: Increase test coverage of ArrayUtils.
              Thanks to Andrii Abramov.
 o LANG-1274: StrSubstitutor should state its thread safety.
 o LANG-1277: StringUtils#getLevenshteinDistance reduce memory consumption.
@@ -208,16 +208,16 @@ HIGHLIGHTS
 
 Some of the highlights in this release include:
 
-o Added Java 9 detection to org.apache.commons.lang3.SystemUtils.
+o Added Java 9 detection to SystemUtils.
 o Support for shifting and swapping elements in
-    org.apache.commons.lang3.ArrayUtils.
+    ArrayUtils.
 o New methods for generating random strings from different character classes
     including alphabetic, alpha-numeric and ASCII added to
-    org.apache.commons.lang3.RandomStringUtils.
-o Numerous extensions to org.apache.commons.lang3.StringUtils including
+    RandomStringUtils.
+o Numerous extensions to StringUtils including
     null safe compare variants, more remove and replace variants, rotation and
     truncation.
-o Added org.apache.commons.lang3.ThreadUtils - a utility class to work with
+o Added ThreadUtils - a utility class to work with
     instances of java.lang.Thread and java.lang.ThreadGroup.
 o Added annotations @EqualsExclude, @HashCodeExclude and @ToStringEclude to
     mark fields which should be ignored by the reflective builders in the
@@ -231,7 +231,7 @@ COMPATIBILITY
 Apache Commons Lang 3.5 is binary compatible with the 3.4 release. Users
 should not experience any problems when upgrading from 3.4 to 3.5.
 
-There has been an addition to the org.apache.commons.lang3.time.DatePrinter
+There has been an addition to the DatePrinter
 interface:
 
 o Added method 'public boolean parse(java.lang.String, java.text.ParsePosition,
@@ -253,11 +253,11 @@ Java 9 introduces a new version-string scheme. Details of this new scheme are
 documented in JEP-223 (http://openjdk.java.net/jeps/223). In order to support
 JEP-223 two classes had to be changed:
 
-o org.apache.commons.lang3.JavaVersion
+o JavaVersion
     deprecated enum constant JAVA_1_9
     introduced enum constant JAVA_9
 
-o org.apache.commons.lang3.SystemUtils
+o SystemUtils
     deprecated constant IS_JAVA_1_9
     introduced constant IS_JAVA_9
 
@@ -507,7 +507,7 @@ COMPATIBILITY
 
 Commons Lang 3.4 is fully binary compatible to the last release and can
 therefore be used as a drop in replacement for 3.3.2. Note that the value of
-org.apache.commons.lang3.time.DurationFormatUtils.ISO_EXTENDED_FORMAT_PATTERN
+DurationFormatUtils.ISO_EXTENDED_FORMAT_PATTERN
 has changed, which may affect clients using the constant. Furthermore the
 constant is used internally in
 o DurationFormatUtils.formatDurationISO(long)
@@ -611,7 +611,7 @@ o LANG-1071: Fix wrong examples in Javadoc of
 o LANG-827:  CompareToBuilder's doc doesn't specify precedence of fields it
              uses in performing comparisons
 o LANG-1020: Improve performance of normalize space. Thanks to Libor Ondrusek.
-o LANG-1027: org.apache.commons.lang3.SystemUtils#isJavaVersionAtLeast should
+o LANG-1027: SystemUtils#isJavaVersionAtLeast should
              return true by default
 o LANG-1026: Bring static method references in StringUtils to consistent style.
              Thanks to Alex Yursha.
@@ -640,7 +640,7 @@ o LANG-998:  Javadoc is not clear on preferred pattern to instantiate
 NEW FEATURES
 ==============
 
-o LANG-989:  Add org.apache.commons.lang3.SystemUtils.IS_JAVA_1_8
+o LANG-989:  Add SystemUtils.IS_JAVA_1_8
 
 FIXED BUGS
 ============
@@ -720,7 +720,7 @@ o LANG-915:  Wrong locale handling in LocaleUtils.toLocale().
 CHANGES
 =========
 
-o LANG-961:  org.apache.commons.lang3.reflect.FieldUtils.removeFinalModifier(Field)
+o LANG-961:  FieldUtils.removeFinalModifier(Field)
              does not clean up after itself
 o LANG-958:  FastDateParser javadoc incorrectly states that SimpleDateFormat
              is used internally
@@ -752,11 +752,11 @@ COMPATIBILITY WITH 3.1
 ========================
 
 This release introduces backwards incompatible changes in 
-org.apache.commons.lang3.time.FastDateFormat:
+FastDateFormat:
 o Method 'protected java.util.List parsePattern()' has been removed
 o Method 'protected java.lang.String parseToken(java.lang.String, int[])' has
   been removed
-o Method 'protected org.apache.commons.lang3.time.FastDateFormat$NumberRule
+o Method 'protected FastDateFormat$NumberRule
   selectNumberRule(int, int)' has been removed
 
 These changes were the result of [LANG-462]. It is assumed that this change 
@@ -855,7 +855,7 @@ o LANG-826:  FastDateParser does not handle non-ASCII digits correctly.
 o LANG-822:  NumberUtils#createNumber - bad behaviour for leading "--".
 o LANG-818:  FastDateFormat's "z" pattern does not respect timezone of Calendar
              instances passed to format().
-o LANG-817:  Add org.apache.commons.lang3.SystemUtils.IS_OS_WINDOWS_8.
+o LANG-817:  Add SystemUtils.IS_OS_WINDOWS_8.
 o LANG-813:  StringUtils.equalsIgnoreCase doesn't check string reference
              equality.
 o LANG-810:  StringUtils.join() endIndex, bugged for loop.
@@ -1093,9 +1093,9 @@ o LANG-658:  Some Entitys like &Ouml; are not matched properly against its
 o LANG-659:  EntityArrays typo: {"\u2122", "&minus;"}, // minus sign, U+2212
              ISOtech
 o LANG-66:   StringEscaper.escapeXml() escapes characters > 0x7f.
-o LANG-662:  org.apache.commons.lang3.math.Fraction does not reduce
+o LANG-662:  Fraction does not reduce
              (Integer.MIN_VALUE, 2^k)
-o LANG-663:  org.apache.commons.lang3.math.Fraction does not always succeed in
+o LANG-663:  Fraction does not always succeed in
              multiplyBy and divideBy
 o LANG-664:  NumberUtils.isNumber(String) is not right when the String is
              "1.1L"

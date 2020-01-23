@@ -47,11 +47,11 @@ COMPATIBILITY WITH 3.1
 ========================
 
 This release introduces backwards incompatible changes in 
-org.apache.commons.lang3.time.FastDateFormat:
+FastDateFormat:
 o Method 'protected java.util.List parsePattern()' has been removed
 o Method 'protected java.lang.String parseToken(java.lang.String, int[])' has
   been removed
-o Method 'protected org.apache.commons.lang3.time.FastDateFormat$NumberRule
+o Method 'protected FastDateFormat$NumberRule
   selectNumberRule(int, int)' has been removed
 
 These changes were the result of [LANG-462]. It is assumed that this change 
@@ -150,7 +150,7 @@ o LANG-826:  FastDateParser does not handle non-ASCII digits correctly.
 o LANG-822:  NumberUtils#createNumber - bad behaviour for leading "--".
 o LANG-818:  FastDateFormat's "z" pattern does not respect timezone of Calendar
              instances passed to format().
-o LANG-817:  Add org.apache.commons.lang3.SystemUtils.IS_OS_WINDOWS_8.
+o LANG-817:  Add SystemUtils.IS_OS_WINDOWS_8.
 o LANG-813:  StringUtils.equalsIgnoreCase doesn't check string reference
              equality.
 o LANG-810:  StringUtils.join() endIndex, bugged for loop.
@@ -386,9 +386,9 @@ o LANG-658:  Some Entitys like &Ouml; are not matched properly against its
 o LANG-659:  EntityArrays typo: {"\u2122", "&minus;"}, // minus sign, U+2212
              ISOtech
 o LANG-66:   StringEscaper.escapeXml() escapes characters > 0x7f.
-o LANG-662:  org.apache.commons.lang3.math.Fraction does not reduce
+o LANG-662:  Fraction does not reduce
              (Integer.MIN_VALUE, 2^k)
-o LANG-663:  org.apache.commons.lang3.math.Fraction does not always succeed in
+o LANG-663:  Fraction does not always succeed in
              multiplyBy and divideBy
 o LANG-664:  NumberUtils.isNumber(String) is not right when the String is
              "1.1L"
